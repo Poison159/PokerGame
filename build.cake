@@ -12,7 +12,7 @@ Task("Build")
 Task("xUnit")
     .IsDependentOn("Build")
     .Does(() => {
-        XUnit2("./PokerEvalaulator.Tests/bin/Debug/netcoreapp3.1/PokerEvalaulator.Tests.dll");
+        DotNetCoreTest("./PokerEvalaulator.Tests/bin/Debug/netcoreapp3.1/PokerEvalaulator.Tests.dll");
     });
 
 RunTarget(target);
