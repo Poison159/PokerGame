@@ -20,7 +20,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.ace)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("ROYALFLUSH", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.royalFlush, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -34,7 +34,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.seven)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("STRAIGHTFLUSH", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.straightFlush, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -48,7 +48,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.ten)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("FLUSH", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.flush, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -62,7 +62,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Club,Rank.four)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("FOUROFAKIND", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.fourOfAKind, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -76,7 +76,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.six)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("STRAIGHT", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.straight, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -90,7 +90,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.five)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("TWOPAIR", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.twoPair, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -104,7 +104,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.five)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("FULLHOUSE", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.fullHouse, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -118,7 +118,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.queen)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("THREEOFAKIND", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.threeOfAKind, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -132,7 +132,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.jack)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("PAIR", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.pair, Poker.evaluateDeck(myCards));
         }
 
         [Fact]
@@ -146,7 +146,7 @@ namespace PokerEvalaulator.Tests
                new Card(Suit.Spade,Rank.jack)
             };
             var myCards = ownHand.OrderBy(x => x.rank).ToList();
-            Assert.Equal("HIGHCARD", Poker.evaluateDeck(myCards));
+            Assert.Equal(Hand.highCard, Poker.evaluateDeck(myCards));
         }
     }
 }

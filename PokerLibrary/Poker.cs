@@ -6,28 +6,28 @@ namespace PokerLibrary
 {
     public static class Poker
     {
-        public static string evaluateDeck(List<Card> cards)
+        public static Hand evaluateDeck(List<Card> cards)
         {
             if (Eval.isPair(cards))
-                return Hand.pair.ToString().ToUpper();
+                return Hand.pair;
             else if (Eval.isTwoPair(cards))
-                return Hand.twoPair.ToString().ToUpper();
+                return Hand.twoPair;
             else if (Eval.isThreeOfAKind(cards))
-                return Hand.threeOfAKind.ToString().ToUpper();
+                return Hand.threeOfAKind;
             else if (Eval.isStraight(cards))
-                return Hand.straight.ToString().ToUpper();
+                return Hand.straight;
             else if (Eval.isFlush(cards))
-                return Hand.flush.ToString().ToUpper();
+                return Hand.flush;
             else if (Eval.isFullHouse(cards))
-                return Hand.fullHouse.ToString().ToUpper();
+                return Hand.fullHouse;
             else if (Eval.isFourOfAKind(cards))
-                return Hand.fourOfAKind.ToString().ToUpper();
+                return Hand.fourOfAKind;
             else if (Eval.isStraightFlush(cards))
-                return Hand.straightFlush.ToString().ToUpper();
+                return Hand.straightFlush;
             else if (Eval.isRoyalFlush(cards))
-                return Hand.royalFlush.ToString().ToUpper();
+                return Hand.royalFlush;
             else
-                return Hand.highCard.ToString().ToUpper();
+                return Hand.highCard;
         }
     }
 }

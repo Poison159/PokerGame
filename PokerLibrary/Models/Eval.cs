@@ -129,16 +129,10 @@ namespace PokerLibrary.Models
         {
             var occurances = new Dictionary<Rank, int>();
             foreach (var card in cards)
-            {
                 if (occurances.ContainsKey(card.rank))
-                {
                     occurances[card.rank] += 1;
-                }
                 else
-                {
                     occurances[card.rank] = 1;
-                }
-            }
             return occurances;
         }
         // Reaturn number of suits in deck
@@ -149,19 +143,15 @@ namespace PokerLibrary.Models
             int ret = 0;
             foreach (var card in cards)
             {
-                if (string.IsNullOrEmpty(temp))
-                {
+                if (string.IsNullOrEmpty(temp)){
                     ret += 1;
                     temp = card.suit.ToString();
                 }
-                else
-                {
+                else{
                     if (temp == card.suit.ToString())
                         continue;
                     else
-                    {
                         ret += 1;
-                    }
                 }
             }
             return ret;
